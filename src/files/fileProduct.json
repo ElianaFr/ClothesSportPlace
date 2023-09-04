@@ -1,0 +1,100 @@
+[
+	{
+		"title": "calza",
+		"description": "Calza deportiva mujer",
+		"price": 5000,
+		"thumbnail": "No posee",
+		"code": "77901",
+		"stock": 50,
+		"id": 0
+	},
+	{
+		"title": "short deportivo",
+		"description": "short deportivo mujer",
+		"price": 6000,
+		"thumbnail": "No posee",
+		"code": "77902",
+		"stock": 50,
+		"id": 1
+	},
+	{
+		"title": "camiseta deportiva",
+		"description": "camiseta mujer",
+		"price": 4000,
+		"thumbnail": "No posee",
+		"code": "77903",
+		"stock": 50,
+		"id": 2
+	},
+    {
+		"title": "calza",
+		"description": "Calza deportiva mujer",
+		"price": 5000,
+		"thumbnail": "No posee",
+		"code": "77904",
+		"stock": 50,
+		"id": 3
+	},
+	{
+		"title": "short deportivo",
+		"description": "short deportivo mujer",
+		"price": 6000,
+		"thumbnail": "No posee",
+		"code": "77905",
+		"stock": 50,
+		"id": 4
+	},
+	{
+		"title": "camiseta deportiva",
+		"description": "camiseta mujer",
+		"price": 4000,
+		"thumbnail": "No posee",
+		"code": "77906",
+		"stock": 50,
+		"id": 5
+	},{
+		"title": "calza",
+		"description": "Calza deportiva mujer",
+		"price": 5000,
+		"thumbnail": "No posee",
+		"code": "77907",
+		"stock": 50,
+		"id": 6
+	},
+	{
+		"title": "short deportivo",
+		"description": "short deportivo mujer",
+		"price": 6000,
+		"thumbnail": "No posee",
+		"code": "77908",
+		"stock": 50,
+		"id": 7
+	},
+	{
+		"title": "camiseta deportiva",
+		"description": "camiseta mujer",
+		"price": 4000,
+		"thumbnail": "No posee",
+		"code": "77909",
+		"stock": 50,
+		"id": 8
+	},
+    {
+		"title": "camiseta deportiva",
+		"description": "camiseta mujer",
+		"price": 4000,
+		"thumbnail": "No posee",
+		"code": "77910",
+		"stock": 50,
+		"id": 9
+	},
+    {
+		"title": "camiseta deportiva",
+		"description": "camiseta mujer",
+		"price": 4000,
+		"thumbnail": "No posee",
+		"code": "77911",
+		"stock": 50,
+		"id": 10
+	}
+]
