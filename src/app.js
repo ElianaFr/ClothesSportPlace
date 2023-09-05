@@ -35,9 +35,8 @@ app.get("/products",async (req,res)=>{
 // ruta por id
 app.get("/products/:prodId",async (req,res)=>{
     try {
-        const products = await managerProductService.getProducts();
         const id = parseInt(req.params.prodId);
-        const productId =  products.find(prod => prod.id === id);
+        const productId =  await managerProductService.getProductById(id);
         if (productId){
             res.send(productId)
         }else{
