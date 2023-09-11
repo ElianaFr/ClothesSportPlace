@@ -22,7 +22,6 @@ router.get("/:cid", async (req,res)=>{
         res.json({error:error.message})
     }
 });
-
 //api/cart/:cid/
 router.post("/:cid/products/:pid",async (req,res)=>{
     try {

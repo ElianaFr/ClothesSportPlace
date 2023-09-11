@@ -65,7 +65,7 @@ class CartManager{
     }
     async updateCart(id,products){
         try {
-            if(this.fileExist(id,products)){
+            if(this.fileExist()){
                 const content = await fs.promises.readFile(this.filePath,"utf8");
                 const contentJson = JSON.parse(content);
                 const cartIndex= contentJson.findIndex(e=>e.id === id);
