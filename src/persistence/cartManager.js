@@ -22,7 +22,7 @@ class CartManager{
     }
     async createCarts(){
         try {
-            // const {id, quantity} = prodCart;
+            
             if(this.fileExist()){
                 const content = await fs.promises.readFile(this.filePath,"utf8");
                 const contentCarts = JSON.parse(content);
@@ -63,13 +63,13 @@ class CartManager{
             throw error;
         }
     }
-    async updateCart(){
+    async updateCart(id,products){
         try {
             if(this.fileExist(id,products)){
                 const content = await fs.promises.readFile(this.filePath,"utf8");
                 const contentJson = JSON.parse(content);
                 const cartIndex= contentJson.findIndex(e=>e.id === id);
-                if(prodIndex === -1){
+                if(cartIndex === -1){
                     console.log ("Carrito no encontrado")
                 }else {
                     contentJson[cartIndex]={ ...contentJson[cartIndex], ...products};

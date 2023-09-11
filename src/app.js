@@ -1,6 +1,6 @@
 import express from "express";
 import { productsRouter } from "./routes/products.routes.js";
-
+import { cartsRouter } from "./routes/carts.routes.js";
 // import {ProductManager} from "./persistence/productManager.js";
 // se crea el servicio que me esta permitiendo acceder a la info que va a estar 
 // en el archivo products
@@ -17,7 +17,7 @@ app.listen(port,()=> console.log(`Servidor funcionando en el puerto ${port}`));
 app.use(express.json());
 
 app.use("/api/products",productsRouter);
-
+app.use("/api/carts",cartsRouter);
 
 
 // // app.listen(port,()=>console.log("Servidor funcionando"));
