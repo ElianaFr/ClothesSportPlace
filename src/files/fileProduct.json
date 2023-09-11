@@ -26,7 +26,7 @@
 		"stock": 50,
 		"id": 2
 	},
-    {
+	{
 		"title": "calza",
 		"description": "Calza deportiva mujer",
 		"price": 5000,
@@ -52,7 +52,8 @@
 		"code": "77906",
 		"stock": 50,
 		"id": 5
-	},{
+	},
+	{
 		"title": "calza",
 		"description": "Calza deportiva mujer",
 		"price": 5000,
@@ -79,7 +80,7 @@
 		"stock": 50,
 		"id": 8
 	},
-    {
+	{
 		"title": "camiseta deportiva",
 		"description": "camiseta mujer",
 		"price": 4000,
@@ -88,7 +89,7 @@
 		"stock": 50,
 		"id": 9
 	},
-    {
+	{
 		"title": "camiseta deportiva",
 		"description": "camiseta mujer",
 		"price": 4000,
@@ -96,5 +97,25 @@
 		"code": "77911",
 		"stock": 50,
 		"id": 10
+	},
+	{
+		"title": "camiseta deportiva",
+		"description": "camiseta mujer",
+		"price": 4000,
+		"thumbnail": "No posee",
+		"code": "77912",
+		"status": true,
+		"stock": 50,
+		"id": 11
+	},
+	{
+		"title": "camiseta deportiva",
+		"description": "camiseta mujer",
+		"price": 4000,
+		"thumbnail": "No posee",
+		"code": "77913",
+		"status": true,
+		"stock": 50,
+		"id": 12
 	}
 ]

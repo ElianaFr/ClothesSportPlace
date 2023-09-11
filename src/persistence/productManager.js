@@ -9,7 +9,6 @@ class ProductManager{
         return fs.existsSync(this.filePath);
         
     }
-
     async getProducts(){
         try {
             if(this.fileExist()){
@@ -27,10 +26,8 @@ class ProductManager{
         }
     }
     async addProduct (productInfo){
-        
         try {
             const {title,description,price,thumbnail,code,stock} = productInfo;
-
             // valido si el archivo existe
             if(this.fileExist()){
                 // lee el archivo
@@ -79,7 +76,6 @@ class ProductManager{
                 const content = await fs.promises.readFile(this.filePath,"utf8");
                 // paso de string a Json
                 const contentJson = JSON.parse(content);
-
                 const prodId = contentJson.find(e=>e.id === id);
                 if(!prodId){
                     console.log("Producto no encontrado");
@@ -87,7 +83,6 @@ class ProductManager{
                     return(prodId)
                 }
             }
-            
         } catch (error) {
             console.log(error.message);
             throw error;
@@ -126,7 +121,6 @@ class ProductManager{
                 }else {
                 // actualiza la informacion del producto que se ingreso
                     contentJson[prodIndex]={ ...contentJson[prodIndex], ...product};
-                    
                 };
                 // se actualiza el archivo
                 await fs.promises.writeFile(this.filePath,JSON.stringify(contentJson,null,"\t"));
