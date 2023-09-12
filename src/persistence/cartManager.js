@@ -13,7 +13,7 @@ class CartManager{
                 const contentCarts = JSON.parse(content);
                 return contentCarts;
             }else{
-                throw new Error ("No es posible leer el archivo");
+                throw new Error ("No es posible cargar la informacion");
             }    
         } catch (error) {
             console.log(error.message);
@@ -41,7 +41,7 @@ class CartManager{
                 await fs.promises.writeFile(this.filePath,JSON.stringify(contentCarts,null,'\t'));
                 return newCart
             }else{
-                throw new Error ("No es posible leer el archivo");
+                throw new Error ("No es posible agregar al carrito");
             }    
         } catch (error) {
             console.log(error.message);
@@ -54,9 +54,15 @@ class CartManager{
                 const content = await fs.promises.readFile(this.filePath,"utf8");
                 const contentCarts = JSON.parse(content);
                 const cartId = contentCarts.find(e=> e.id=== id);
-                return cartId
+                if(!cartId){
+                    throw new Error ("El carrito no existe");
+                }else{
+                    return cartId
+                }
+                
+                // return cartId
             }else{
-                throw new Error ("No es posible leer el archivo");
+                throw new Error ("No se pudo cargar el carrito");
             }    
         } catch (error) {
             console.log(error.message);
@@ -70,7 +76,8 @@ class CartManager{
                 const contentJson = JSON.parse(content);
                 const cartIndex= contentJson.findIndex(e=>e.id === cid);
                 if(cartIndex === -1){
-                    console.log ("Carrito no encontrado")
+                    throw new Error ("Carrito no encontrado")
+                    // console.log ("Carrito no encontrado")
                 }else {
                     const productIndex = contentJson[cartIndex].products.findIndex(e => e.id === pid);
                     if(productIndex === -1){

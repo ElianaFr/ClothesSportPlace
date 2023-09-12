@@ -107,15 +107,5 @@
 		"status": true,
 		"stock": 50,
 		"id": 11
-	},
-	{
-		"title": "camiseta deportiva",
-		"description": "camiseta mujer",
-		"price": 4000,
-		"thumbnail": "No posee",
-		"code": "77913",
-		"status": true,
-		"stock": 50,
-		"id": 12
 	}
 ]

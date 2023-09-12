@@ -11,7 +11,8 @@ router.post("/", async (req,res)=>{
         console.log("Peticion recibida")
         res.json(add)
     } catch (error) {
-        res.json({status:"error",message:error.message});
+        res.status(404).json({status:"error",message:error.message})
+        // res.json({status:"error",message:error.message});
     }
 });
 // localhost:8080/api/products con query
@@ -28,7 +29,8 @@ router.get("/", async (req,res)=>{
             res.json(products);
         }
     } catch (error) {
-        res.json({status:"error",message:error.message});
+        res.status(404).json({status:"error",message:error.message});
+        // res.json({status:"error",message:error.message});
     }
 });
 // localhost:8080/api/products/:pid
@@ -38,7 +40,8 @@ router.get("/:pid",async(req,res)=>{
         const productId =  await productsService.getProductById(id);
         res.json({data:productId})
     } catch (error) {
-        res.json({status:"error",message:error.message});
+        res.status(404).json({status:"error",message:error.message});
+        // res.json({status:"error",message:error.message});
     }
     
 });
@@ -62,7 +65,7 @@ router.delete("/:pid", async (req,res)=>{
         console.log("Peticion recibida, eliminar producto")
         res.json(newList)
     } catch (error) {
-        res.json({status:"error",message:error.message});
+        res.status(404).json({status:"error",message:error.message});
     }
 });
 

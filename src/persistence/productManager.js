@@ -34,16 +34,17 @@ class ProductManager{
                 const content = await fs.promises.readFile(this.filePath,"utf8");
                 // paso de string a Json
                 const contentJson = JSON.parse(content);
-                                
                 // validar que se ingrese toda la info
-                if (!productInfo.title || !productInfo.description || !productInfo.price ||!productInfo.thumbnail 
+                if (!productInfo.title || !productInfo.description || !productInfo.price  
                     ||!productInfo.code || !productInfo.stock){
-                    console.log("Se necesita ingresar datos validos");
+                    // console.log("Se necesita ingresar datos validos");
+                    throw new Error ("Ingresar todos los datos")
                 }else{
                     // validar que el codigo no se repita
                     const prodCode = contentJson.find((e)=>e.code===productInfo.code)
                     if(prodCode){
-                        console.log("Code ya existe, vuelva a ingresar un dato correcto")
+                        // console.log("Code ya existe, vuelva a ingresar un dato correcto")
+                        throw new Error ("Codigo repetido, ingrese otro codigo ")
                     }else{
                         let newId
                         if(contentJson.length == 0){
@@ -78,7 +79,8 @@ class ProductManager{
                 const contentJson = JSON.parse(content);
                 const prodId = contentJson.find(e=>e.id === id);
                 if(!prodId){
-                    console.log("Producto no encontrado");
+                    throw new Error ("Producto no encontrado")
+                    // console.log("Producto no encontrado");
                 }else{
                     return(prodId)
                 }
@@ -91,17 +93,20 @@ class ProductManager{
     async deleteProduct(id){
         try {
             if(this.fileExist()){
-                // lee el archivo
                 const content = await fs.promises.readFile(this.filePath,"utf8");
-                // paso de string a Json
                 const contentJson = JSON.parse(content);
                 // busca los objetos que cumple con la condicion
-                const listProd = contentJson.filter(e=>e.id !== id);
-                // sobreescribir el archivo con el nuevo producto
-                await fs.promises.writeFile(this.filePath,JSON.stringify(listProd,null,"\t"));
-                console.log("Producto borrado");
+                const existId = contentJson.find(e=>e.id === id);
+                if(!existId){
+                    throw new Error ("Producto no encontrado")
+                }else{
+                    const listProd = contentJson.filter(e=>e.id !== id);
+                    await fs.promises.writeFile(this.filePath,JSON.stringify(listProd,null,"\t"));    
+                }
+                
             }else{
-                console.log("Ingrese un ID valido");
+                throw new Error ("Ingrese un ID correcto")
+                // console.log("Ingrese un ID valido");
             }
         }catch (error) {
             console.log(error.message);
@@ -117,7 +122,8 @@ class ProductManager{
                 const contentJson = JSON.parse(content);
                 const prodIndex= contentJson.findIndex(e=>e.id === id);
                 if(prodIndex === -1){
-                    console.log ("Producto no encontrado")
+                    throw new Error ("Producto no encontrado")
+                    // console.log ("Producto no encontrado")
                 }else {
                 // actualiza la informacion del producto que se ingreso
                     contentJson[prodIndex]={ ...contentJson[prodIndex], ...product};
