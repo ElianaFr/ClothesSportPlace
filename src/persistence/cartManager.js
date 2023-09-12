@@ -63,25 +63,27 @@ class CartManager{
             throw error;
         }
     }
-    async updateCart(id,products){
+    async updateCart(cid,pid){
         try {
             if(this.fileExist()){
                 const content = await fs.promises.readFile(this.filePath,"utf8");
                 const contentJson = JSON.parse(content);
-                const cartIndex= contentJson.findIndex(e=>e.id === id);
+                const cartIndex= contentJson.findIndex(e=>e.id === cid);
                 if(cartIndex === -1){
                     console.log ("Carrito no encontrado")
                 }else {
-                    contentJson[cartIndex]={ ...contentJson[cartIndex], ...products};
-                    
+                    const productIndex = contentJson[cartIndex].products.findIndex(e => e.id === pid);
+                    if(productIndex === -1){
+                        contentJson[cartIndex].products.push({
+                            id:pid,
+                            quantity:1
+                        });
+                    }else{
+                        contentJson[cartIndex].products[productIndex].quantity ++;
+                    }
                 };
-                // contentJson[prodIndex]={...contentJson[prodIndex],...product}
                 await fs.promises.writeFile(this.filePath,JSON.stringify(contentJson,null,"\t"));
-                
-
-
-
-            } 
+            }
         }catch (error) {
             console.log(error.message);
             throw error;
