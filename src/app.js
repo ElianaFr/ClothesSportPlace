@@ -9,9 +9,13 @@ const app = express();
 
 app.listen(port,()=> console.log(`Servidor funcionando en el puerto ${port}`));
 
-// routes
+// midleware para leer la info del body
 app.use(express.json());
-
+//  midleware para leer la informacion del formulario
+app.use(express.urlencoded({extended:true}));
+// se agrega la ruta donde van a estar nuestreos archivos publicos
+app.use(express.static("public"));
+// routes
 app.use("/api/products",productsRouter);
 app.use("/api/carts",cartsRouter);
 

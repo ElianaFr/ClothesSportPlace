@@ -107,5 +107,14 @@
 		"status": true,
 		"stock": 50,
 		"id": 11
+	},
+	{
+		"title": "prueba1",
+		"description": "prueba1",
+		"price": "8",
+		"thumbnail": "short mujer running.jpeg",
+		"code": "999",
+		"stock": "9",
+		"id": 12
 	}
 ]

@@ -1,18 +1,23 @@
 import { Router } from "express";
 import { productsService } from "../persistence/index.js";
-
+import { uploader } from "../utils.js";
 const router = Router();
 
 // cargar un nuevo producto /api/products
-router.post("/", async (req,res)=>{
+// se agrega poder cargar imagenes
+router.post("/",uploader.single("thumbnail"), async (req,res)=>{
     try {
+        // toma la info del formulario
         const productAdd = req.body;
+        console.log("info desde el formulario",productAdd);
+        console.log("info de la imagen subida",req.file);
+        productAdd.thumbnail = req.file.filename
         const add = await productsService.addProduct(productAdd);
         console.log("Peticion recibida")
-        res.json(add)
+        res.json({data:"producto creado"})
     } catch (error) {
         res.status(404).json({status:"error",message:error.message})
-        // res.json({status:"error",message:error.message});
+        
     }
 });
 // localhost:8080/api/products con query
