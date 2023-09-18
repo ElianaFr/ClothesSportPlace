@@ -116,5 +116,14 @@
 		"code": "999",
 		"stock": "9",
 		"id": 12
+	},
+	{
+		"title": "prueba2",
+		"description": "3",
+		"price": "3",
+		"thumbnail": "remera nike hombre.jpeg",
+		"code": "222",
+		"stock": "3",
+		"id": 13
 	}
 ]
