@@ -1,3 +1,16 @@
 <h1>
     PAGINA PARA MOSTRAR TODOS LOS ARTICULOS CARGADOS
 </h1>
+
+{{#each products}}
+    <div>
+        <p>{{this.title}}</p>
+        <p>{{this.description}}</p>
+        <p>CODIGO: {{this.code}}</p>
+        <p>STOCK: {{this.stock}}</p>
+        <p>PRECIO: $ {{this.price}}</p>
+            
+        <hr>
+    </div>
+    <br>
+{{/each}}

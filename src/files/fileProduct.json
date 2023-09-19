@@ -109,21 +109,11 @@
 		"id": 11
 	},
 	{
-		"title": "prueba1",
-		"description": "prueba1",
-		"price": "8",
-		"thumbnail": "short mujer running.jpeg",
-		"code": "999",
-		"stock": "9",
+		"title": "prueba funcionamiento",
+		"description": "prueba",
+		"price": 898,
+		"code": 8789,
+		"stock": 8,
 		"id": 12
-	},
-	{
-		"title": "prueba2",
-		"description": "3",
-		"price": "3",
-		"thumbnail": "remera nike hombre.jpeg",
-		"code": "222",
-		"stock": "3",
-		"id": 13
 	}
 ]

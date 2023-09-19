@@ -1,3 +1,32 @@
-<H1>
+<h1>
     REAL TIME PRODUCTS
-</H1>
+</h1>
+
+<h1>FORMULARIO PARA CARGAR PRODUCTOS</h1>
+    
+    <form id="createProdForm">
+        <input type="text" placeholder="Nombre del producto" name="title" style=" font-size: 20px; margin-bottom: 10px;"/ >
+        <br>
+        <input type="text" placeholder="Descripcion" name="description" style=" font-size: 20px; margin-bottom: 10px;"/>
+        <br>
+        <input type="text"placeholder="Precio" name="price" style=" font-size: 20px; margin-bottom: 10px;"/>
+        <br>
+        <input type="text"placeholder="Codigo" name="code" style=" font-size: 20px; margin-bottom: 10px;"/>
+        <br>
+        <input type="text"placeholder="Disponibilidad" name="stock" style=" font-size: 20px; margin-bottom: 10px;"/>
+        <br>
+        {{!-- <input type="file" placeholder="Enlace de la imagen" name="thumbnail" style=" font-size: 20px; margin-bottom: 10px;"/> --}}
+        <br>
+        <button style=" font-size: 20px; margin-bottom: 10px">ALTA PRODUCTO</button>
+    </form>
+<br>
+<hr>
+<br>
+<h3> Listado de productos </h3>
+
+<div id="productList"></div>
+
+
+{{!-- script para websocket lado cliente// para que sea en todo el proyecto se pone en el main --}}
+<script src="socket.io/socket.io.js"></script>
+<script src="/js/realTimeProducts.js"></script>
