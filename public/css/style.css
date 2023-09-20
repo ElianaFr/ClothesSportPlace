@@ -1,0 +1,197 @@
+body{
+    background-color: rgb(0, 0, 0); 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    color: rgb(253, 251, 251);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.navBarTit {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5e5b5b;
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+}
+.navBarList {
+    float:right;
+}
+.navBarLink {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #1c2085;
+}
+.active {
+    background-color: #04AA6D;
+}
+
+/* home.hbs */
+.tit{
+    text-align: center;
+}
+/* container productos */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.containerCard{
+    margin: 30px;
+    
+}
+/* card productos */
+.card {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 8px 0 rgba(252, 250, 250, 0.44);
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    font-size: 16px;
+    padding: 20px;
+    color: black;
+}
+img{
+    width: 100%;
+}
+.price {
+    color: rgb(25, 24, 24);
+    font-size: 20px;
+    
+}
+.title{
+    color:rgb(55, 76, 97);
+    font-size: 23px;
+}
+/* btn productos */
+.button{
+    /* background-color: #4CAF50;  */
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.btnAdd{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.btnAdd:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.btnInfo{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+.btnInfo:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+/* realtime hbs */
+.titPage{
+    text-align: center;
+}
+.titForm{
+    text-align: center;
+}
+.containerForm{
+    display: flex;
+    justify-content: center;
+    
+}
+.containerSon{
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    position: relative;
+    width: fit-content;
+    box-shadow: 8px 8px 8px 0 rgba(252, 250, 250, 0.44);
+}
+
+input{
+    font-size: 25px; 
+    margin: 10px;
+    padding: 10px;
+    width: fit-content;
+    display: block;
+    border-radius: 15px;
+    border: 2px solid grey;
+    
+}
+.buttonForm{
+    display: block;
+    margin: 0 auto;
+    font-size: 20px; 
+    padding: 10px;
+    border-radius:15px;
+    background-color: rgb(187, 229, 177); 
+    color: black; 
+    border: 2px solid #4CAF50;
+    font-weight: 700;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+}
+.buttonForm:hover {
+    background-color: #35710a;
+    color: white;
+}
+/* listado de productos */
+.titReal{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 100px;
+}
+.prodList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    
+}
+.cardForm {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 8px 0 rgba(252, 250, 250, 0.44);
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+    font-family: arial;
+    font-size: 16px;
+    padding: 20px;
+    color: black;
+}
+.btnProd{
+    background-color: rgba(182, 134, 134, 0.373);  
+    color: rgb(0, 0, 0); 
+    border: 2px solid #6e0000;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.btnProd:hover {
+    background-color: #ab2222;
+    color: white;
+}
+p{
+    font-size: 15px;
+}
+

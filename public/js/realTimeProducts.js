@@ -35,14 +35,14 @@ socketClient.on("productsArray", (productData)=>{
     productData.forEach(product => {
         productsElement +=
         `   
-        <div>
-            <p> Nombre: ${product.title}</p> 
+        <div class="cardForm">
+            <p> Producto: ${product.title}</p> 
             <p> Detalle: ${product.description}</p>
             <p> Codigo: ${product.code}</p>
             <p> Stock: ${product.stock}</p>
-            <p> price: $ ${product.price}</p>
-            <button onclick="deleteProd(${product.id})">BORRAR</button>
-            <hr>
+            <p> Precio: $ ${product.price}</p>
+            <button class="btnProd" onclick="deleteProd(${product.id})">BORRAR</button>
+            
         </div>
         
         `
