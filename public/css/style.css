@@ -1,11 +1,11 @@
 body{
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0); 
+    background-color: rgb(244, 242, 242); 
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    color: rgb(253, 251, 251);
+    color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
 }
 .navBarTit {
@@ -13,7 +13,7 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #1ab1f2b1;
+    background-color: #015c83;
     position: fixed;
     top: 0;
     width: 100%;
@@ -40,7 +40,10 @@ li a:hover {
 
 /* home.hbs */
 .containerTit{
-    padding: 5%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    background-color: black;
+    color: aliceblue;
 }
 .tit{
     text-align: center;
@@ -50,7 +53,7 @@ li a:hover {
 .container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-around;
     
 }
 .containerCard{
@@ -60,7 +63,7 @@ li a:hover {
 /* card productos */
 .card {
     background-color: rgb(255, 255, 255);
-    box-shadow: 4px 4px 8px 0 rgba(252, 250, 250, 0.44);
+    box-shadow: 4px 4px 8px 0 rgba(181, 180, 180, 0.44);
     width: 200px;
     margin: auto;
     text-align: center;
@@ -68,6 +71,7 @@ li a:hover {
     font-size: 16px;
     padding: 20px;
     color: black;
+    border-radius: 20px;
 }
 img{
     width: 100%;
@@ -119,10 +123,11 @@ img{
 /* realtime hbs */
 .titPage{
     text-align: center;
-    padding-top: 40px;
+    padding-top: 60px;
 }
 .titForm{
     text-align: center;
+    margin-bottom: 40px;
 }
 .containerForm{
     display: flex;
@@ -131,11 +136,11 @@ img{
 }
 .containerSon{
     border-radius: 10px;
-    background-color: #f2f2f2;
+    background-color: #cbcbcb;
     padding: 20px;
     position: relative;
     width: fit-content;
-    box-shadow: 8px 8px 8px 0 rgba(252, 250, 250, 0.44);
+    /* box-shadow: 8px 8px 8px 0 rgba(121, 120, 120, 0.44); */
 }
 
 input{
@@ -169,7 +174,8 @@ input{
     text-align: center;
     font-size: 25px;
     font-weight: 900;
-    margin-top: 100px;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 .prodList{
     display: flex;
@@ -179,7 +185,7 @@ input{
 }
 .cardForm {
     background-color: rgb(255, 255, 255);
-    box-shadow: 4px 4px 8px 0 rgba(252, 250, 250, 0.44);
+    box-shadow: 4px 4px 8px 0 rgba(109, 109, 109, 0.773);
     width: 200px;
     margin: 20px;
     text-align: center;
@@ -187,6 +193,7 @@ input{
     font-size: 16px;
     padding: 20px;
     color: black;
+    border-radius: 20px;
 }
 .btnProd{
     background-color: rgba(182, 134, 134, 0.373);  

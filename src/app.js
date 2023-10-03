@@ -7,7 +7,7 @@ import path from "path";
 import { engine } from "express-handlebars";
 import { Server } from "socket.io";
 import { productsService } from "./persistence/index.js";
-import { pid } from "process";
+
 
 
 // se define el puerto

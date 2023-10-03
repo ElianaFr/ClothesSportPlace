@@ -1,9 +1,11 @@
 // socket del lado del cliente
 const socketClient = io();
+
 // elementos 
 const productList = document.getElementById("productList")
 const createProdForm = document.getElementById("createProdForm")
 const deleteId = document.getElementById("")
+
 // recibimos la info del formulario al socket servidor
 // capturamos el evento
 createProdForm.addEventListener("submit",(event)=>{
@@ -36,11 +38,13 @@ socketClient.on("productsArray", (productData)=>{
         productsElement +=
         `   
         <div class="cardForm">
+            <img src="${product.thumbnail}">
             <p> Producto: ${product.title}</p> 
             <p> Detalle: ${product.description}</p>
             <p> Codigo: ${product.code}</p>
             <p> Stock: ${product.stock}</p>
             <p> Precio: $ ${product.price}</p>
+
             <button class="btnProd" onclick="deleteProd(${product.id})">BORRAR</button>
             
         </div>

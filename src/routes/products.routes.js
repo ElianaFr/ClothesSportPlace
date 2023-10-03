@@ -1,7 +1,10 @@
 import { Router } from "express";
 import { productsService } from "../persistence/index.js";
 import { uploader } from "../utils.js";
+
+
 const router = Router();
+
 
 // cargar un nuevo producto /api/products
 // se agrega poder cargar imagenes
@@ -73,6 +76,8 @@ router.delete("/:pid", async (req,res)=>{
         res.status(404).json({status:"error",message:error.message});
     }
 });
+
+
 
 
 export {router as productsRouter}
